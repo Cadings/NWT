@@ -1,0 +1,29 @@
+enable
+configure terminal
+
+interface range fastEthernet0/10-17
+switchport mode access
+switchport access vlan 10
+switchport trunk native vlan 66
+switchport nonegotiate
+
+exit
+
+interface range fastEthernet0/18-24
+switchport mode access
+switchport access vlan 20
+switchport trunk native vlan 66
+switchport nonegotiate
+
+exit
+
+interface range fastEthernet0/4-9
+switchport mode access
+switchport access vlan 30
+switchport trunk native vlan 66
+switchport nonegotiate
+
+exit
+exit
+
+show vlan brief
